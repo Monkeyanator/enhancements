@@ -1,5 +1,4 @@
 ---
-kep-number: 8
 title: Kustomize
 authors:
   - "@pwittrock"
@@ -13,35 +12,45 @@ approvers:
   - "@soltysh"
 editor: "@droot"
 creation-date: 2018-05-05
-last-updated: 2018-05-23
+last-updated: 2019-01-09
 status: implemented
 see-also:
   - n/a
 replaces:
   - kinflate # Old name for kustomize
 superseded-by:
-  - n/a
+  - "kustomize-subbcommand-integration.md"
 ---
 
 # Kustomize
 
 ## Table of Contents
 
-- [Kustomize](#kustomize)
-   - [Table of Contents](#table-of-contents)
-   - [Summary](#summary)
-   - [Motivation](#motivation)
-      - [Goals](#goals)
-      - [Non-Goals](#non-goals)
-   - [Proposal](#proposal)
-      - [Implementation Details/Notes/Constraints [optional]](#implementation-detailsnotesconstraints-optional)
-      - [Risks and Mitigations](#risks-and-mitigations)
-      - [Risks of Not Having a Solution](#risks-of-not-having-a-solution)
-   - [Graduation Criteria](#graduation-criteria)
-   - [Implementation History](#implementation-history)
-   - [Drawbacks](#drawbacks)
-   - [Alternatives](#alternatives)
-   - [FAQ](#faq)
+<!-- toc -->
+- [Summary](#summary)
+- [Motivation](#motivation)
+    - [Long standing issues](#long-standing-issues)
+  - [Goals](#goals)
+  - [Non-Goals](#non-goals)
+    - [Exposing every imperative kubectl command in a declarative fashion](#exposing-every-imperative-kubectl-command-in-a-declarative-fashion)
+    - [Providing a simpler facade on top of the Kubernetes APIs](#providing-a-simpler-facade-on-top-of-the-kubernetes-apis)
+- [Proposal](#proposal)
+  - [Capabilities](#capabilities)
+    - [<em>kustomization.yaml</em> will allow users to reference config files](#kustomizationyaml-will-allow-users-to-reference-config-files)
+    - [<em>kustomization.yaml</em> will allow users to generate configs from files](#kustomizationyaml-will-allow-users-to-generate-configs-from-files)
+    - [<em>kustomization.yaml</em> will allow users to apply transformations to configs](#kustomizationyaml-will-allow-users-to-apply-transformations-to-configs)
+  - [UX](#ux)
+    - [Edit](#edit)
+    - [Diff](#diff)
+  - [Implementation Details/Notes/Constraints [optional]](#implementation-detailsnotesconstraints-optional)
+  - [Risks and Mitigations](#risks-and-mitigations)
+  - [Risks of Not Having a Solution](#risks-of-not-having-a-solution)
+- [Graduation Criteria](#graduation-criteria)
+- [Implementation History](#implementation-history)
+- [Drawbacks](#drawbacks)
+- [Alternatives](#alternatives)
+- [FAQs](#faqs)
+<!-- /toc -->
 
 ## Summary
 

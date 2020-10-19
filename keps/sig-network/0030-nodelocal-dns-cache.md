@@ -1,5 +1,4 @@
 ---
-kep-number: 30
 title: NodeLocal DNS Cache
 authors:
   - "@prameshj"
@@ -16,28 +15,31 @@ approvers:
   - "@bowei"
 editor: TBD
 creation-date: 2018-10-05
-last-updated: 2018-10-30
-status: provisional
+last-updated: 2019-04-25
+status: implemented
 ---
 
 # NodeLocal DNS Cache
 
 ## Table of Contents
 
-* [Table of Contents](#table-of-contents)
-* [Summary](#summary)
-* [Motivation](#motivation)
-    * [Goals](#goals)
-    * [Non-Goals](#non-goals)
-* [Proposal](#proposal)
-    * [Risks and Mitigations](#risks-and-mitigations)
-* [Graduation Criteria](#graduation-criteria)
-* [Rollout Plan](#rollout-plan)
-* [Implementation History](#implementation-history)
-* [Drawbacks [optional]](#drawbacks-optional)
-* [Alternatives [optional]](#alternatives-optional)
-
-[Tools for generating]: https://github.com/ekalinin/github-markdown-toc
+<!-- toc -->
+- [Summary](#summary)
+- [Motivation](#motivation)
+  - [Goals](#goals)
+  - [Non-Goals](#non-goals)
+- [Proposal](#proposal)
+    - [Daemonset and Listen Interface for caching agent](#daemonset-and-listen-interface-for-caching-agent)
+    - [iptables NOTRACK](#iptables-notrack)
+    - [Choice of caching agent](#choice-of-caching-agent)
+    - [Metrics](#metrics)
+  - [Risks and Mitigations](#risks-and-mitigations)
+- [Graduation Criteria](#graduation-criteria)
+- [Rollout Plan](#rollout-plan)
+- [Implementation History](#implementation-history)
+- [Drawbacks [optional]](#drawbacks-optional)
+- [Alternatives [optional]](#alternatives-optional)
+<!-- /toc -->
 
 ## Summary
 
@@ -199,6 +201,7 @@ This feature will be launched with Alpha support in the first release. Master ve
 
 * 2018-10-05 - Creation of the KEP
 * 2018-10-30 - Follow up comments and choice of cache agent
+* 2018-11-14 - [Changes](https://github.com/kubernetes/kubernetes/pull/70555) to support running NodeLocal DNSCache were merged.
 
 ## Drawbacks [optional]
 

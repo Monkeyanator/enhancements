@@ -2,7 +2,7 @@
 
 Enhancement tracking repo for Kubernetes releases. Owned by [PM SIG](https://github.com/kubernetes/community/blob/master/sig-pm/README.md).
 
-This repo only contains issues. These issues are umbrellas for new enhancements to be added to Kubernetes. An enhancement usually takes multiple releases to complete. And an enhancement can be tracked as backlog items before work begins. An enhancement may be filed once there is consensus in at least one [Kubernetes SIG](https://git.k8s.io/community/sig-list.md).
+This repo contains issues and [KEPs](https://git.k8s.io/enhancements/keps). These issues are umbrellas for new enhancements to be added to Kubernetes. An enhancement usually takes multiple releases to complete. And an enhancement can be tracked as backlog items before work begins. An enhancement may be filed once there is consensus in at least one [Kubernetes SIG](https://git.k8s.io/community/sig-list.md).
 
 ## Is My Thing an Enhancement?
 
@@ -12,12 +12,13 @@ An enhancement is anything that:
 
 - a blog post would be written about after its release (ex. [minikube](https://kubernetes.io/blog/2016/07/minikube-easily-run-kubernetes-locally/), [StatefulSets](https://kubernetes.io/blog/2016/07/thousand-instances-of-cassandra-using-kubernetes-pet-set/), [rkt container runtime](https://kubernetes.io/blog/2016/07/rktnetes-brings-rkt-container-engine-to-kubernetes/))
 - requires multiple parties/SIGs/owners participating to complete (ex. GPU scheduling [API, Core, & Node], StatefulSets [Storage & API])
+- will be graduating from one stage to another (ex. alpha to beta, beta to GA)
 - needs significant effort or changes Kubernetes in a significant way (ex. something that would take 10 person-weeks to implement, introduce or redesign a system component, or introduces API changes)
 - impacts the UX or operation of Kubernetes substantially such that engineers using Kubernetes will need retraining
 - users will notice and come to rely on
 
 It is unlikely an enhancement if it is:
-- implemented using `ThirdPartyResource` and/or in https://github.com/kubernetes/contrib
+- implemented using `CustomResourceDefinition` and/or in https://github.com/kubernetes/contrib
 - fixing a flaky test
 - refactoring code
 - performance improvements, which are only visible to users as faster API operations, or faster control loops
@@ -61,9 +62,12 @@ Please do not comment on the enhancement issue to:
 All the enhancements from this repo are visualized in the Enhancements Tracking Spreadsheets.
 
 Links:
-
-[1.13 Milestone](https://bit.ly/k8s113-features)
-[1.12 Milesonte](https://bit.ly/k8s112-features)
+- [1.17 Milestone](https://docs.google.com/spreadsheets/d/1ebKGsYB1TmMnkx86bR2ZDOibm5KWWCs_UjV3Ys71WIs/edit)
+- [1.16 Milestone](https://docs.google.com/spreadsheets/d/1txj0SuCJGm_uDCcJJDx_IjrfhlSnW-thtfQY91oXRLo/edit)
+- [1.15 Milestone](https://docs.google.com/spreadsheets/d/1Vc949C4iC2f8GTmjfJkX04VUNcbimhg8ujp1bUAjGK4/edit)
+- [1.14 Milestone](https://docs.google.com/spreadsheets/d/116X6E-lmDJG5UZPlqDAFw8hN9vS6SNY4qRNZ9fKtsMU/edit)
+- [1.13 Milestone](https://bit.ly/k8s113-features)
+- [1.12 Milestone](https://bit.ly/k8s112-features)
 
 Procedure:
 *TBA*
@@ -76,3 +80,4 @@ Procedure:
 | `kind/feature` | Denotes that the issue should be tracked as an enhancement (All enhancement issues should be marked with this label) | Set the label using the comment `/kind feature` (on a separate line) | Anyone |
 | `tracked/yes` | Denotes an issue has been reviewed by a Feature Maintainer (SIG PM / SIG Release) and is actively tracked for the current milestone | Manually set | Feature Maintainers (SIG PM / SIG Release) ONLY |
 | `tracked/no` | Denotes an issue has been reviewed by a Feature Maintainer (SIG PM / SIG Release) and will not actively tracked for the current milestone | Manually set | Feature Maintainers (SIG PM / SIG Release) ONLY |
+| `stage/{alpha,beta,stable}` | Denotes the stage of an issue in the features process. | Set the label using the comment `/stage alpha` (on a separate line) | Anyone |

@@ -1,5 +1,4 @@
 ---
-kep-number: 0018
 title: Reporting Conformance Test Results to Testgrid
 authors:
   - "@andrewsykim"
@@ -21,22 +20,40 @@ editor: TBD
 creation-date: 2018-06-06
 last-updated: 2018-11-16
 status: implementable
-
 ---
 
 # Reporting Conformance Test Results to Testgrid
 
 ## Table of Contents
 
-* [Summary](#summary)
-* [Motivation](#motivation)
-    * [Goals](#goals)
-    * [Non-Goals](#non-goals)
-* [Proposal](#proposal)
-    * [Implementation Details/Notes/Constraints](#implementation-detailsnotesconstraints)
-    * [Risks and Mitigations](#risks-and-mitigations)
-* [Graduation Criteria](#graduation-criteria)
-* [Implementation History](#implementation-history)
+<!-- toc -->
+- [Summary](#summary)
+- [Motivation](#motivation)
+  - [Goals](#goals)
+  - [Non-Goals](#non-goals)
+- [Proposal](#proposal)
+  - [Implementation Details/Notes/Constraints](#implementation-detailsnotesconstraints)
+    - [How to Run E2E Conformance Tests](#how-to-run-e2e-conformance-tests)
+    - [Sonobuoy](#sonobuoy)
+      - [Installing Sonobuoy](#installing-sonobuoy)
+      - [Running Conformance Tests with Sonobuoy](#running-conformance-tests-with-sonobuoy)
+    - [Kubetest](#kubetest)
+      - [Installing Kubetest](#installing-kubetest)
+      - [Running Conformance Test with kubetest](#running-conformance-test-with-kubetest)
+    - [How to Upload Conformance Test Results to Testgrid](#how-to-upload-conformance-test-results-to-testgrid)
+      - [Requesting a GCS Bucket](#requesting-a-gcs-bucket)
+      - [Authenticating to your Testgrid Bucket](#authenticating-to-your-testgrid-bucket)
+      - [Uploading results to Testgrid](#uploading-results-to-testgrid)
+      - [Testgrid Configuration](#testgrid-configuration)
+    - [Lifecycle of Test Results](#lifecycle-of-test-results)
+    - [Examples](#examples)
+  - [Risks and Mitigations](#risks-and-mitigations)
+    - [Operational Overhead](#operational-overhead)
+    - [Misconfigured Tests](#misconfigured-tests)
+    - [Flaky Tests](#flaky-tests)
+- [Graduation Criteria](#graduation-criteria)
+- [Implementation History](#implementation-history)
+<!-- /toc -->
 
 ## Summary
 

@@ -33,13 +33,24 @@ This is a KEP template, outlining how to propose a new cloud provider into the K
 
 ## Table of Contents
 
-* [Table of Contents](#table-of-contents)
-* [Summary](#summary)
-* [Motivation](#motivation)
-    * [Goals](#goals)
-    * [Non-Goals](#non-goals)
-* [Requirements](#requirements)
-* [Proposal](#proposal)
+<!-- toc -->
+- [Summary](#summary)
+- [Motivation](#motivation)
+  - [Goals](#goals)
+  - [Non-Goals](#non-goals)
+- [Prerequisites](#prerequisites)
+  - [Repository Requirements](#repository-requirements)
+  - [User Experience Reports](#user-experience-reports)
+  - [Testgrid Integration](#testgrid-integration)
+  - [CNCF Certified Kubernetes](#cncf-certified-kubernetes)
+  - [Documentation](#documentation)
+  - [Technical Leads are members of the Kubernetes Organization](#technical-leads-are-members-of-the-kubernetes-organization)
+- [Proposal](#proposal)
+  - [Subproject Leads](#subproject-leads)
+  - [Repositories](#repositories)
+  - [Meetings](#meetings)
+  - [Others](#others)
+<!-- /toc -->
 
 ## Summary
 
@@ -77,7 +88,7 @@ Your cloud provider is accepted as part of the [Certified Kubernetes Conformance
 
 ### Documentation
 
-There is documentation on running Kubernetes on your cloud provider as per the [cloud provider documentation KEP](https://github.com/kubernetes/community/blob/master/keps/sig-cloud-provider/0019-cloud-provider-documentation.md).
+There is documentation on running Kubernetes on your cloud provider as per the [cloud provider documentation KEP](https://github.com/kubernetes/enhancements/blob/master/keps/sig-cloud-provider/20180731-cloud-provider-docs.md).
 
 ### Technical Leads are members of the Kubernetes Organization
 

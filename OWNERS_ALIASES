@@ -1,13 +1,213 @@
 aliases:
-  features-maintainers:
+  sig-api-machinery-leads:
+    - lavalamp
+    - deads2k
+  sig-apps-leads:
+    - mattfarina
+    - prydonius
+    - kow3ns
+    - janetkuo
+  sig-architecture-leads:
+    - derekwaynecarr
+    - dims
+    - johnbelamaric
+  sig-auth-leads:
+    - mikedanese
+    - enj
+    - tallclair
+    - deads2k
+    - liggitt
+    - mikedanese
+  sig-autoscaling-leads:
+    - mwielgus
+  sig-cli-leads:
+    - soltysh
+    - seans3
+    - soltysh
+    - pwittrock
+  sig-cloud-provider-leads:
+    - andrewsykim
+    - cheftako
+  sig-cluster-lifecycle-leads:
+    - justinsb
+    - luxas
+    - timothysc
+  sig-contributor-experience-leads:
+    - Phillels
+    - parispittman
+    - cblecker
+    - nikhita
+  sig-docs-leads:
+    - bradamant3
+    - jimangel
+    - zacharysarah
+  sig-instrumentation-leads:
+    - piosz
+    - brancz
+  sig-multicluster-leads:
+    - csbell
+    - quinton-hoole
+  sig-network-leads:
+    - thockin
+    - dcbw
+    - caseydavenport
+  sig-node-leads:
+    - dchen1107
+    - derekwaynecarr
+  sig-pm-leads:
+    - calebamiles
     - idvoretskyi
+    - jdumars
     - justaugustus
-    - kacole2
   sig-release-leads:
     - calebamiles
     - justaugustus
     - tpepper
-  sig-pm-leads:
-    - apsinha
+  sig-scalability-leads:
+    - wojtek-t
+    - shyamjvs
+  sig-scheduling-leads:
+    - ahg-g
+    - k82cn
+  sig-service-catalog-leads:
+    #- kibbles-n-bytes # not an org member
+    - jberkhahn
+    #- jboyd01 # not an org member
+  sig-storage-leads:
+    - saad-ali
+    - childsb
+  sig-testing-leads:
+    - spiffxp
+    - fejta
+    - stevekuznetsov
+    - timothysc
+  sig-ui-leads:
+    - floreks
+    - maciaszczykm
+    - danielromlein
+    - jeefy
+  sig-windows-leads:
+    - michmike
+    - patricklang
+  wg-apply-leads:
+    - lavalamp
+  wg-component-standard-leads:
+    - luxas
+    - sttts
+    - mtaufen
+  wg-iot-edge-leads:
+    #- cindyxing # not an org member
+    #- dejanb # not an org member
+    #- ptone # not an org member
+    - cantbewong
+  wg-k8s-infra-leads:
+    - dims
+    - spiffxp
+  wg-lts-leads:
+    - tpepper
+    - imkin
+    - quinton-hoole
+    - youngnick
+  wg-machine-learning-leads:
+    - vishh
+    - kow3ns
+    - balajismaniam
+    - ConnorDoyle
+  wg-multitenancy-leads:
+    - davidopp
+    - tashimi
+  wg-policy-leads:
+    #- hannibalhuang # not an org member
+    #- tsandall # not an org member
+    #- easeway # not an org member
+    #- ericavonb # not an org member
+    #- mdelder # not an org member
+  wg-resource-management-leads:
+    - vishh
+    - derekwaynecarr
+  wg-security-audit-leads:
+    #- aasmall # not an org member
+    - joelsmith
+    #- cji # not an org member
+    #- jaybeale # not an org member
+  ug-big-data-leads:
+    - foxish
+    - erikerlandson
+    - liyinan926
+  committee-code-of-conduct:
+    - jdumars
+    - parispittman
+    - carolynvs
+    - eparis
+    - bradamant3
+  committee-product-security:
+    - philips
+    - cjcullen
+    - tallclair
+    - liggitt
+    - joelsmith
+  committee-steering:
+    - bgrant0607
+    - brendandburns
+    - derekwaynecarr
+    - dims
+    - jbeda
+    - michelleN
+    - philips
+    - pwittrock
+    - sarahnovotny
+    - smarterclayton
+    - spiffxp
+    - timothysc
+## BEGIN CUSTOM CONTENT
+  pm-maintainers:
+    - calebamiles # SIG PM Chair
+    - idvoretskyi # SIG PM Chair
+    - jdumars # SIG PM Chair
+    - justaugustus # SIG PM Chair
+  features-maintainers:
+    - justaugustus # 1.12 Features Lead
+    - claurence # 1.14 Enhancements Lead
+    - kacole2 # 1.15 / 1.13 Enhancements Lead
+  kep-process-approvers:
     - calebamiles
     - idvoretskyi
+    - jdumars
+    - justaugustus
+  kep-process-reviewers:
+    - lachie83
+  kep-reviewers:
+    - bgrant0607
+    - derekwaynecarr
+    - dims
+    - jbeda
+    - jdumars
+    - mattfarina
+  kep-approvers:
+    - bgrant0607
+    - derekwaynecarr
+    - dims
+    - jbeda
+    - jdumars
+    - mattfarina
+  provider-aws:
+    - d-nishi
+    - justinsb
+    - kris-nova
+  provider-azure:
+    - craiglpeters
+    - justaugustus
+    - feiskyer
+    - khenidak
+  provider-gcp:
+    - abgworrall
+  provider-ibmcloud:
+    - spzala
+  provider-openstack:
+    - adisky
+    - chrigl
+    - hogepodge
+  provider-vmware:
+    - cantbewong
+    - frapposelli
+## END CUSTOM CONTENT
